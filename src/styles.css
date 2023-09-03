@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #282846;
+  --board-color: #d8ebe4;
+  --snake-color: #fed049;
+  --food-color: #007580;
+
+  --dpad-radius: 17%;
+  --dpad-radius-in: 20%;
+  --dpad-fg: #ddd;
+  --dpad-fg-hover: #eee;
+  --dpad-bg: #fff;
+  --arrowcolor: #aaa;
+  --tri-sml-a: 13px;
+  --tri-sml-b: 19px;
+  --tri-lrg-a: 13px;
+  --tri-lrg-b: 19px;
+  --dpad-arrow-shift: 5px;
+  --dpad-arrow-move: 35%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #282846;
+
+  font-family: 'Anton', sans-serif;
+}
+
+.game-board {
+  border: 5px solid orangered;
+  width: 200vmin;
+  height: 84vmin;
+  display: grid;
+  align-self: center;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  background-image: url("src/assets/images/Stamp_of_Ukraine_s1985.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.snake {
+  background-color: transparent;
+  background-image: url("assets/images/fire-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+}
+
+.head {
+  background-color: transparent;
+  background-image: url("assets/images/racket-removebg-preview (1).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+}
+
+.food {
+  background-color: transparent;
+  background-image: url("assets/images/ship-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+}
+
+.obstacle {
+  background-color: transparent;
+  background-image: url("assets/images/rock-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+

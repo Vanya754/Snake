@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="score-card">
+
+    <div class="instruction-button">?</div>
+    <div class="instruction-window"><p>To control the snake, use the arrow keys or "W", "A", "S", "D" keys.</p>
+      <p>To pause the game, press the "Space" key.</p>
+      <p>To restart the game, press the "R" key.</p>
+      <p>Starting from level 5, the boundaries of the field will open up.</p>
+      <p>Starting from level 10, you can bite off a part of the snake, but your score will decrease.</p>
+      <p>Obstacles will appear from level 10 onwards, so be attentive!</p>
+    </div>
+
+    <div class="score-board">
+      <h1>Best Score</h1>
+      <h3>{{m.bestScore}}</h3>
+    </div>
+
+    <div class="score-card">
+      <div class="score-board">
+        <h1>Score</h1>
+        <h3>{{m.score}}</h3>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-board">
+        <h1>Level</h1>
+        <h3>{{m.level}}</h3>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="score-board">
+        <h1>Time</h1>
+        <h3>{{m.time}}</h3>
+      </div>
+    </div>
+
+    <div (click)="restart()" class="restart-button">
+      RESTART
+    </div>
+  </div>
+
+  <div *ngIf="m.isPaused && !m.gameOver" class="pause-overlay">
+    <h1>PAUSED</h1>
+    <p>Press Space to resume</p>
+  </div>
+
+  <div *ngIf="this.m.gameOver" class="game-over">
+    <h1>Game Over</h1>
+  </div>
+
+  <div class="game-board"></div>
+
+  <div class="mobile-controls">
+    <nav class="o-pad">
+      <a (click)="dPadMovement('ArrowUp')" class="up"></a>
+      <a (click)="dPadMovement('ArrowRight')" class="right"></a>
+      <a (click)="dPadMovement('ArrowDown')" class="down"></a>
+      <a (click)="dPadMovement('ArrowLeft')" class="left"></a>
+    </nav>
+  </div>
+
+</div>
+
+
+
